@@ -16,6 +16,7 @@ namespace Cintera.DAL
         }
 
         public DbSet<Case> Cases { get; set; }
+        public DbSet<Sighting> Sightings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -23,6 +24,15 @@ namespace Cintera.DAL
             // Remove pluralization of table names
             //
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            //
+            // Configuring entities
+            //
+            modelBuilder.Entity<Sighting>()
+                .Property(x => x.Address)
+                .IsRequired()
+                .HasMaxLength(256);
+
 
             base.OnModelCreating(modelBuilder);
         }

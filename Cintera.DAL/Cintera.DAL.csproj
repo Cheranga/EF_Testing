@@ -59,8 +59,13 @@
     <Compile Include="Migrations\201709291937524_SingularTableNames.Designer.cs">
       <DependentUpon>201709291937524_SingularTableNames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709292002265_AddedSighting.cs" />
+    <Compile Include="Migrations\201709292002265_AddedSighting.Designer.cs">
+      <DependentUpon>201709292002265_AddedSighting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sighting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -72,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709291937524_SingularTableNames.resx">
       <DependentUpon>201709291937524_SingularTableNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709292002265_AddedSighting.resx">
+      <DependentUpon>201709292002265_AddedSighting.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
